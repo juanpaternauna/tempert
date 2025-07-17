@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfiles Destacados</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+    }
+
+    header {
+      background-color: #1e88e5;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .profile-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .profile-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+    }
+
+    .profile-info {
+      padding: 1.2rem;
+    }
+
+    .profile-info h2 {
+      margin: 0 0 0.5rem 0;
+      color: #333;
+      font-size: 1.4rem;
+    }
+
+    .profile-info p {
+      margin: 0.3rem 0;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    section.info {
+      background-color: #ffffff;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto 3rem auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    section.info h2 {
+      text-align: center;
+      color: #1e88e5;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    section.info h3 {
+      color: #1e88e5;
+      margin-top: 1.5rem;
+    }
+
+    section.info p, section.info ul {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    section.info ul {
+      padding-left: 1.2rem;
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      max-width: 720px;
+      height: 405px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .profile-info h2 {
+        font-size: 1.2rem;
+      }
+
+      .profile-img {
+        aspect-ratio: 4 / 3;
+      }
+
+      .video-container iframe {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Controlador de Temperatura</h1>
+  </header>
+
+  <section class="container">
+    <!-- Perfil 1 -->
+    <div class="profile-card">
+      <img src="https://cdn.discordapp.com/attachments/1269403006365991065/1395195997935636480/Imagen_de_WhatsApp_2025-07-16_a_las_18.57.42_0313efeb.jpg?ex=68799107&is=68783f87&hm=ae04bf1ec8a88a6c30cad39fad51ba1f7c78cc3348d7e1c34039e12be4094612&" alt="Persona 1" class="profile-img">
+      <div class="profile-info">
+        <h2>America Aguirre</h2>
+        <p><strong>Profesión:</strong> Diseñadora UX/UI</p>
+        <p><strong>Ciudad:</strong> Medellín, Colombia</p>
+        <p><strong>Correo:</strong> guerraganem@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Perfil 2 -->
+    <div class="profile-card">
+      <img src="https://cdn.discordapp.com/attachments/1269403006365991065/1395196888508010559/Imagen_de_WhatsApp_2025-07-16_a_las_19.10.32_5359f3db.jpg?ex=687991db&is=6878405b&hm=47a85919c84dab849ade6f30fb1775e7da6631437443aaa46d2a9597d0f70b10&" alt="Persona 2" class="profile-img">
+      <div class="profile-info">
+        <h2>Matías Álvarez</h2>
+        <p><strong>Profesión:</strong> Ingeniero de Software</p>
+        <p><strong>Ciudad:</strong> Medellín, Colombia</p>
+        <p><strong>Correo:</strong> Alvarezmatias785@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Perfil 3 -->
+    <div class="profile-card">
+      <img src="https://cdn.discordapp.com/attachments/1269403006365991065/1395204301168836708/image.png?ex=687998c3&is=68784743&hm=dc22280a429b42c0e65a503dba96884017d9637f05349514f8ae1f0d9ae6b014&" alt="Persona 3" class="profile-img">
+      <div class="profile-info">
+        <h2>salome González</h2>
+        <p><strong>Profesión:</strong> Psicóloga Organizacional</p>
+        <p><strong>Ciudad:</strong> Medellín, Colombia</p>
+        <p><strong>Correo:</strong> ninguno</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de presentación del proyecto -->
+  <section class="info">
+    <h2>📱 Aplicación de Monitoreo de Temperatura</h2>
+    <p>
+      <strong>ThermoSmart</strong> es una innovadora aplicación móvil diseñada para <strong>medir y monitorear la temperatura en tiempo real</strong>.
+    </p>
+    <h3>🎯 Presentación del Proyecto</h3>
+    <p>
+      Ideal para aplicaciones médicas, ambientales y de mantenimiento industrial.
+    </p>
+    <h3>🌟 Beneficios Clave</h3>
+    <ul>
+      <li>✅ Medición precisa y en tiempo real</li>
+      <li>✅ Compatible con múltiples tipos de sensores</li>
+      <li>✅ Fácil de usar desde el celular o PC</li>
+      <li>✅ Notificaciones en caso de temperaturas anormales</li>
+      <li>✅ Registro de historial para análisis</li>
+    </ul>
+  </section>
+
+  <!-- Video -->
+  <section class="video-container">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+</body>
+</html>
+
+
+
+
